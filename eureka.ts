@@ -26,7 +26,7 @@ enum kyori {
 
 namespace eureka_Maqueen {
     //% color="#3943c6" weight=70　blockId=moving1
-    //% block="|%sinkou_houkou| へ |%time_sec|(秒) 速さ|%Power|" group="1　基本の動き"
+    //% block="|%sinkou_houkou| へ |%time_sec|秒間 速さ|%Power|で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection_time(sinkou_houkou: direction, time_sec: number, Power: number): void {
         switch (sinkou_houkou) {
@@ -81,7 +81,7 @@ namespace eureka_Maqueen {
     }
 
     //% color="#3943c6" weight=70　blockId=moving2
-    //% block="|%sinkou_houkou| へ 速さ |%Power|" group="1　基本の動き"
+    //% block="|%sinkou_houkou| へ 速さ |%Power| で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection(sinkou_houkou: direction, Power: number): void {
         switch (sinkou_houkou) {
@@ -123,7 +123,7 @@ namespace eureka_Maqueen {
 
     //% color="#009A00" weight=20 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="3 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
-    export function sonar_ping_3(nagasa: kyori, limit: number): boolean {
+    export function sonar_ping_3(limit: number,nagasa: kyori,): boolean {
         switch (nagasa) {
             case kyori.短い:
                 if (maqueen.Ultrasonic(PingUnit.Centimeters) < limit) {

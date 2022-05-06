@@ -22,7 +22,7 @@ enum kyori {
     長い,
 }
 
-//% color="#3943c6" weight=94 block="Eureka Maq" icon="\uf1b9"
+//% color="#3943c6" weight=110 block="Eureka Maq" icon="\uf1b9"
 
 namespace eureka_Maqueen {
     //% color="#3943c6" weight=70　blockId=moving1

@@ -26,7 +26,7 @@ enum kyori {
 
 namespace eureka_Maqueen {
     //% color="#3943c6" weight=70　blockId=moving1
-    //% block="To|%sinkou_houkou|  |%time_sec|(sec) Power|%Power|" group="1　基本の動き"
+    //% block="|%sinkou_houkou| へ |%time_sec|(秒) 速さ|%Power|" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection_time(sinkou_houkou: direction, time_sec: number, Power: number): void {
         switch (sinkou_houkou) {
@@ -81,7 +81,7 @@ namespace eureka_Maqueen {
     }
 
     //% color="#3943c6" weight=70　blockId=moving2
-    //% block="To|%sinkou_houkou|　Power|%Power|" group="1　基本の動き"
+    //% block="|%sinkou_houkou| へ 速さ |%Power|" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection(sinkou_houkou: direction, Power: number): void {
         switch (sinkou_houkou) {
@@ -116,12 +116,12 @@ namespace eureka_Maqueen {
     }
 
     //% color="#1E90FF" weight=51 blockId=wait_time1
-    //% block="Wait time |%second|(sec) " group="1　基本の動き"
+    //% block="待ち時間 |%second|(秒) " group="1　基本の動き"
     export function wait_time1(second: number): void {
         basic.pause(second * 1000);
     }
 
-    //% color="#009A00" weight=20 block="Distance is |%nagasa| than |%limit|(cm)" group="3 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=20 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="3 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
     export function sonar_ping_3(nagasa: kyori, limit: number): boolean {
         switch (nagasa) {
@@ -142,7 +142,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#6041f1"  weight=23 block="Only 右 stepped on|%wb|" group="4　センサー" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#6041f1"  weight=23 block="右センサーだけが |%wb| をふんだ時" group="4　センサー" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -163,7 +163,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#6041f1"  weight=24 block="Only 左 stepped on|%wb|" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ" 
+    //% color="#6041f1"  weight=24 block="左センサーだけが |%wb| をふんだ時" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ" 
     export function photo_L_out(wb: 白黒): boolean {
 
         switch (wb) {
@@ -184,7 +184,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#6041f1"  weight=25 block="Stepped on both sides|%wb|" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#6041f1"  weight=25 block="左右のセンサーが両方 |%wb| をふんだ時" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photo_LR_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:

@@ -164,7 +164,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#009A00" weight=76 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#f071bd" weight=76 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
     export function sonar_ping_2(): number {
 
         return maqueen.Ultrasonic(PingUnit.Centimeters);
@@ -287,7 +287,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#009A00"  weight=46 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
+    //% color="#f071bd"  weight=46 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
     export function microbit2_denkitemp(): number {
 
         return Math.round(input.lightLevel() / 254 * 100);

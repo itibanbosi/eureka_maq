@@ -171,14 +171,14 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="きょりを表示する" group="3 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="きょりを表示する" group="2 超音波きょりｾﾝｻｰ"
     export function sonar_ping_LED() {
         basic.showNumber(maqueen.Ultrasonic(PingUnit.Centimeters));
     }
 
 
 
-    //% color="#6041f1"  weight=23 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="4 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1"  weight=23 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -249,7 +249,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾗｲﾝｾﾝｻｰ"
+    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:

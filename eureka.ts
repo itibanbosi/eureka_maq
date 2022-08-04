@@ -151,7 +151,10 @@ namespace eureka_Maqueen {
     }
 
 
-
+    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="きょりを表示する" group="3 超音波きょりｾﾝｻｰ"
+    export function sonar_ping_LED() {
+        basic.showNumber(maqueen.Ultrasonic(PingUnit.Centimeters));
+    }
 
 
 

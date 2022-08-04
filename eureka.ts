@@ -114,6 +114,19 @@ namespace eureka_Maqueen {
                 break;
         }
     }
+    //% color="#3943c6" weight=68　blockId=moving3
+    //% block="左タイヤ|%PowerL| 右タイヤ|%PowerR|で走る" group="1　基本の動き"
+    //% PowerL.min=0 Power.max=255
+    //% PowerR.min=0 Power.max=255
+    export function car_balance(PowerL: number, PowerR: number): void {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, PowerL);
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, PowerR)
+
+    }
+
+
+
+
 
     //% color="#1E90FF" weight=51 blockId=wait_time1
     //% block="待ち時間 |%second|(秒) " group="1　基本の動き"

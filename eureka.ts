@@ -278,7 +278,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#f071bd"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
+    //% color="#c71585"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
     //% limit.min=0 limit.max=100
     export function microbit2_decideLight(limit: number): boolean {
         if (input.lightLevel() / 254 * 100 < limit) {
@@ -290,7 +290,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#f071bd"  weight=46 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
+    //% color="#c71585"  weight=46 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
     export function microbit2_denkitemp(): number {
 
         return Math.round(input.lightLevel() / 254 * 100);
@@ -298,7 +298,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#f071bd"  weight=44 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
+    //% color="#c71585"  weight=44 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
     export function microbit2_denkiLED() {
         basic.showNumber(Math.round(input.lightLevel() / 254 * 100));
     }

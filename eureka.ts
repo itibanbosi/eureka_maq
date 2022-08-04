@@ -230,7 +230,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#009A00" weight=21 block="|RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:

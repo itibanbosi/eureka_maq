@@ -230,16 +230,15 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#009A00" weight=21 block="左ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
-    export function photoL_disp() {
-        basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolLeft));
+    //% color="#009A00" weight=21 block="|RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    export function photoL_disp(RL:lotation) {
+        switch(RL){
+            case lotation.左:
+                basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolLeft));
+            case lotation.右:
+                basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolRight));
+        }
     }
-
-    //% color="#009A00" weight=20 block="右ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
-    export function photoR_disp() {
-        basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolRight));
-    }
-
 
 
     //% color="#009A00"  weight=81 blockId=microbit2_decideLight block="m:bit光ｾﾝｻ値 |%limit| より暗い" group="3 microbitの光ｾﾝｻ"

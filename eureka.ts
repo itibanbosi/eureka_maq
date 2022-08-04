@@ -141,7 +141,7 @@ namespace eureka_Maqueen {
         basic.pause(second * 1000);
     }
 
-    //% color="#6041f1" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
     export function sonar_ping_3(limit: number, nagasa: kyori,): boolean {
         switch (nagasa) {
@@ -164,7 +164,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#f071bd" weight=76 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=76 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
     export function sonar_ping_2(): number {
 
         return maqueen.Ultrasonic(PingUnit.Centimeters);
@@ -239,7 +239,7 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#f071bd" weight=62 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1" weight=62 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
     export function phto_R(RL:lotation) {
         switch (RL){
             case lotation.右:
@@ -249,7 +249,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#009A00" weight=60 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1" weight=60 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:
@@ -275,7 +275,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#6041f1"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
+    //% color="#f071bd"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
     //% limit.min=0 limit.max=100
     export function microbit2_decideLight(limit: number): boolean {
         if (input.lightLevel() / 254 * 100 < limit) {
@@ -295,7 +295,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#228b22"  weight=44 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
+    //% color="#f071bd"  weight=44 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
     export function microbit2_denkiLED() {
         basic.showNumber(Math.round(input.lightLevel() / 254 * 100));
     }

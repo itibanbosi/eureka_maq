@@ -144,26 +144,10 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#009A00" weight=22 blockId=sonar_ping_2 block="Distance sensor" group="6 Ultrasonic_Distance sensor"
-    //% advanced=true
+    //% color="#009A00" weight=22 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="3 超音波きょりｾﾝｻｰ"
     export function sonar_ping_2(): number {
-        let d1 = 0;
-        let d2 = 0;
 
-        for (let i = 0; i < 5; i++) {
-            // send
-            basic.pause(5);
-            pins.setPull(DigitalPin.P2, PinPullMode.PullNone);
-            pins.digitalWritePin(DigitalPin.P2, 0);
-            control.waitMicros(2);
-            pins.digitalWritePin(DigitalPin.P2, 1);
-            control.waitMicros(10);
-            pins.digitalWritePin(DigitalPin.P2, 0);
-            // read
-            d1 = pins.pulseIn(DigitalPin.P0, PulseValue.High, 500 * 58);
-            d2 = d2 + d1;
-        }
-        return Math.round(Math.idiv(d2 / 5, 58) * 1.5);
+        return maqueen.Ultrasonic(PingUnit.Centimeters);
     }
 
 

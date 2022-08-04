@@ -158,7 +158,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#6041f1"  weight=23 block="右センサーだけが |%wb| をふんだ時" group="4　センサー" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#6041f1"  weight=23 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="4 ﾗｲﾝｾﾝｻｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -179,7 +179,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#6041f1"  weight=24 block="左センサーだけが |%wb| をふんだ時" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ" 
+    //% color="#6041f1"  weight=24 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="4 ﾗｲﾝｾﾝｻｰ"
     export function photo_L_out(wb: 白黒): boolean {
 
         switch (wb) {
@@ -200,7 +200,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#6041f1"  weight=25 block="左右のセンサーが両方 |%wb| をふんだ時" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#6041f1"  weight=25 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="4 ﾗｲﾝｾﾝｻｰ"
     export function photo_LR_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -219,18 +219,18 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#f071bd" weight=30 block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#f071bd" weight=30 block="右ﾗｲﾝｾﾝｻｰ" group="4 ﾗｲﾝｾﾝｻｰ"
     export function phto_R() {
         return maqueen.readPatrol(maqueen.Patrol.PatrolRight);
     }
 
-    //% color="#f071bd" weight=28 block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#f071bd" weight=28 block="左ﾗｲﾝｾﾝｻｰ" group="4 ﾗｲﾝｾﾝｻｰ"
     export function phto_L() {
         return maqueen.readPatrol(maqueen.Patrol.PatrolLeft);
     }
 
 
-    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:

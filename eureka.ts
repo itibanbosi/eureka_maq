@@ -22,6 +22,13 @@ enum kyori {
     長い,
 }
 
+enum ONOFF {
+    つける,
+    消す,
+}
+
+
+
 //% color="#3943c6" weight=97 block="Eureka Maq" icon="\uf1b9"
 
 namespace eureka_Maqueen {
@@ -279,8 +286,35 @@ namespace eureka_Maqueen {
     }
 
 
+
+
+//% color="#228b22"  weight=82 blockId=microbit2_denkiLED block="LEDを|%mode|する" group="3 LED"
+export function maq_LED(mode:ONOFF) {
+
+        switch (mode) {
+            case ONOFF.つける:
+                maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn);
+                maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn);
+                break;
+            case ONOFF.消す:
+                maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff);
+                maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff);
+                break;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
 
 

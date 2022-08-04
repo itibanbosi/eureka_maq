@@ -144,7 +144,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa|" group="2 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
     export function sonar_ping_3(limit: number, nagasa: kyori,): boolean {
         switch (nagasa) {
@@ -181,7 +181,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#a0522d"  weight=66 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#a0522d"  weight=66 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ"  group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -202,7 +202,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#a0522d"  weight=68 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#a0522d"  weight=68 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_L_out(wb: 白黒): boolean {
 
         switch (wb) {
@@ -223,7 +223,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#a0522d"  weight=64 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#a0522d"  weight=64 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_LR_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:

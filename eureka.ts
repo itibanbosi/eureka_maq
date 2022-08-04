@@ -87,7 +87,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#3943c6" weight=70　blockId=moving2
+    //% color="#3943c6" weight=88　blockId=moving2
     //% block="|%sinkou_houkou|へ,　速さ|%Power|で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection(sinkou_houkou: direction, Power: number): void {
@@ -121,7 +121,7 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#3943c6" weight=68　blockId=moving3
+    //% color="#3943c6" weight=86　blockId=moving3
     //% block="左ﾀｲﾔ|%PowerL|の速さ,　右ﾀｲﾔ|%PowerR|の速さで走る" group="1　基本の動き"
     //% PowerL.min=0 PowerL.max=255
     //% PowerR.min=0 PowerR.max=255
@@ -135,13 +135,13 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#1E90FF" weight=51 blockId=wait_time1
+    //% color="#1E90FF" weight=84 blockId=wait_time1
     //% block="待ち時間 |%second|(秒) " group="1　基本の動き"
     export function wait_time1(second: number): void {
         basic.pause(second * 1000);
     }
 
-    //% color="#009A00" weight=20 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
     export function sonar_ping_3(limit: number, nagasa: kyori,): boolean {
         switch (nagasa) {
@@ -164,21 +164,21 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#009A00" weight=22 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=76 blockId=sonar_ping_2 block="超音波距離ｾﾝｻｰの値(cm)" group="2 超音波きょりｾﾝｻｰ"
     export function sonar_ping_2(): number {
 
         return maqueen.Ultrasonic(PingUnit.Centimeters);
     }
 
 
-    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="きょりを表示する" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#009A00" weight=74 blockId=sonar_ping_LED block="きょりを表示する" group="2 超音波きょりｾﾝｻｰ"
     export function sonar_ping_LED() {
         basic.showNumber(maqueen.Ultrasonic(PingUnit.Centimeters));
     }
 
 
 
-    //% color="#6041f1"  weight=23 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1"  weight=66 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -199,7 +199,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#6041f1"  weight=24 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1"  weight=68 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_L_out(wb: 白黒): boolean {
 
         switch (wb) {
@@ -220,7 +220,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#6041f1"  weight=25 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#6041f1"  weight=64 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_LR_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -239,7 +239,7 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#f071bd" weight=30 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#f071bd" weight=62 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
     export function phto_R(RL:lotation) {
         switch (RL){
             case lotation.右:
@@ -249,7 +249,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#009A00" weight=60 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:
@@ -259,37 +259,8 @@ namespace eureka_Maqueen {
         }
     }
 
-
-    //% color="#009A00"  weight=81 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
-    //% limit.min=0 limit.max=100
-    export function microbit2_decideLight(limit: number): boolean {
-        if (input.lightLevel() / 254 * 100 < limit) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-
-    //% color="#009A00"  weight=80 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
-    export function microbit2_denkitemp(): number {
-
-        return Math.round(input.lightLevel() / 254 * 100);
-
-    }
-
-
-    //% color="#228b22"  weight=82 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
-    export function microbit2_denkiLED() {
-        basic.showNumber(Math.round(input.lightLevel() / 254 * 100));
-    }
-
-
-
-
-//% color="#228b22"  weight=82 block="LEDを|%mode|する" group="4 LED"
-export function maq_LED(mode:ONOFF) {
+    //% color="#228b22"  weight=60 block="LEDを|%mode|する" group="4 LED"
+    export function maq_LED(mode: ONOFF) {
 
         switch (mode) {
             case ONOFF.つける:
@@ -304,16 +275,30 @@ export function maq_LED(mode:ONOFF) {
     }
 
 
+    //% color="#009A00"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
+    //% limit.min=0 limit.max=100
+    export function microbit2_decideLight(limit: number): boolean {
+        if (input.lightLevel() / 254 * 100 < limit) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 
+    //% color="#009A00"  weight=46 blockId=microbit2_denkitemp block="micro:bit光ｾﾝｻ値" group="5 microbitの光ｾﾝｻ"
+    export function microbit2_denkitemp(): number {
+
+        return Math.round(input.lightLevel() / 254 * 100);
+
+    }
 
 
-
-
-
-
-
+    //% color="#228b22"  weight=44 blockId=microbit2_denkiLED block="micro:bit光ｾﾝｻの値を表示する" group="5 microbitの光ｾﾝｻ"
+    export function microbit2_denkiLED() {
+        basic.showNumber(Math.round(input.lightLevel() / 254 * 100));
+    }
 
 }
 

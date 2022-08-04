@@ -29,10 +29,10 @@ enum ONOFF {
 
 
 
-//% color="#3943c6" weight=87 block="Eureka Maq" icon="\uf1b9"
+//% color="#3943c6" weight=90 block="Eureka Maq" icon="\uf1b9"
 
 namespace eureka_Maqueen {
-    //% color="#3943c6" weight=70　blockId=moving1
+    //% color="#3943c6" weight=86　blockId=moving1
     //% block="|%sinkou_houkou| へ |%time_sec|秒間,　速さ|%Power|で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection_time(sinkou_houkou: direction, time_sec: number, Power: number): void {
@@ -121,7 +121,8 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#3943c6" weight=86　blockId=moving3
+
+    //% color="#3943c6" weight=84　blockId=moving3
     //% block="左ﾀｲﾔ|%PowerL|の速さ,　右ﾀｲﾔ|%PowerR|の速さで走る" group="1　基本の動き"
     //% PowerL.min=0 PowerL.max=255
     //% PowerR.min=0 PowerR.max=255
@@ -134,12 +135,14 @@ namespace eureka_Maqueen {
 
 
 
-
-    //% color="#1E90FF" weight=84 blockId=wait_time1
+    //% color="#1E90FF" weight=82 blockId=wait_time1
     //% block="待ち時間 |%second|(秒) " group="1　基本の動き"
     export function wait_time1(second: number): void {
         basic.pause(second * 1000);
     }
+
+
+
 
     //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30

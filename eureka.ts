@@ -29,7 +29,7 @@ enum ONOFF {
 
 
 
-//% color="#3943c6" weight=97 block="Eureka Maq" icon="\uf1b9"
+//% color="#3943c6" weight=87 block="Eureka Maq" icon="\uf1b9"
 
 namespace eureka_Maqueen {
     //% color="#3943c6" weight=70　blockId=moving1

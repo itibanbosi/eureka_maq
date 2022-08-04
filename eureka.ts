@@ -219,6 +219,54 @@ namespace eureka_Maqueen {
                 break;
         }
     }
+    //% color="#f071bd" weight=30 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    export function phto_R() {
+        return maqueen.readPatrol(maqueen.Patrol.PatrolRight);
+    }
+
+    //% color="#f071bd" weight=28 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    export function phto_L() {
+        return maqueen.readPatrol(maqueen.Patrol.PatrolLeft);
+    }
+
+
+    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="左ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    export function photoL_disp() {
+        basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolLeft));
+    }
+
+    //% color="#009A00" weight=20 blockId=sonar_ping_LED block="右ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    export function photoR_disp() {
+        basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolRight));
+    }
+
+
+
+    //% color="#009A00"  weight=81 blockId=microbit2_decideLight block="m:bit光ｾﾝｻ値 |%limit| より暗い" group="3 microbitの光ｾﾝｻ"
+    //% limit.min=0 limit.max=100
+    export function microbit2_decideLight(limit: number): boolean {
+        if (input.lightLevel() / 254 * 100 < limit) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
+    //% color="#009A00"  weight=80 blockId=microbit2_denkitemp block="m:bit光ｾﾝｻ値" group="3 microbitの光ｾﾝｻ"
+    export function microbit2_denkitemp(): number {
+
+        return Math.round(input.lightLevel() / 254 * 100);
+
+    }
+
+
+    //% color="#228b22"  weight=82 blockId=microbit2_denkiLED block="m:bit光ｾﾝｻの値を表示する" group="3 microbitの光ｾﾝｻ"
+    export function microbit2_denkiLED() {
+        basic.showNumber(Math.round(input.lightLevel() / 254 * 100));
+    }
+
 
 }
 

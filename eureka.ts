@@ -219,16 +219,15 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#f071bd" weight=30 block="右ﾗｲﾝｾﾝｻｰ" group="4 ﾗｲﾝｾﾝｻｰ"
-    export function phto_R() {
-        return maqueen.readPatrol(maqueen.Patrol.PatrolRight);
+    //% color="#f071bd" weight=30 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="4 ﾗｲﾝｾﾝｻｰ"
+    export function phto_R(RL:lotation) {
+        switch (RL){
+            case lotation.右:
+                return maqueen.readPatrol(maqueen.Patrol.PatrolRight);
+            case lotation.左:
+                return maqueen.readPatrol(maqueen.Patrol.PatrolLeft);
+        }
     }
-
-    //% color="#f071bd" weight=28 block="左ﾗｲﾝｾﾝｻｰ" group="4 ﾗｲﾝｾﾝｻｰ"
-    export function phto_L() {
-        return maqueen.readPatrol(maqueen.Patrol.PatrolLeft);
-    }
-
 
     //% color="#009A00" weight=21 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {

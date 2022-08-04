@@ -219,23 +219,23 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#f071bd" weight=30 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#f071bd" weight=30 block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function phto_R() {
         return maqueen.readPatrol(maqueen.Patrol.PatrolRight);
     }
 
-    //% color="#f071bd" weight=28 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#f071bd" weight=28 block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function phto_L() {
         return maqueen.readPatrol(maqueen.Patrol.PatrolLeft);
     }
 
 
-    //% color="#009A00" weight=21 blockId=sonar_ping_LED block="左ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#009A00" weight=21 block="左ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photoL_disp() {
         basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolLeft));
     }
 
-    //% color="#009A00" weight=20 blockId=sonar_ping_LED block="右ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
+    //% color="#009A00" weight=20 block="右ﾗｲﾝｾﾝｻｰの値を表示する" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photoR_disp() {
         basic.showNumber(maqueen.readPatrol(maqueen.Patrol.PatrolRight));
     }

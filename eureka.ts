@@ -116,8 +116,8 @@ namespace eureka_Maqueen {
     }
     //% color="#3943c6" weight=68　blockId=moving3
     //% block="左ﾀｲﾔ|%PowerL|の速さ,　右ﾀｲﾔ|%PowerR|の速さで走る" group="1　基本の動き"
-    //% PowerL.min=0 Power.max=255
-    //% PowerR.min=0 Power.max=255
+    //% PowerL.min=0 PowerL.max=255
+    //% PowerR.min=0 PowerR.max=255
     export function car_balance(PowerL: number, PowerR: number): void {
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, PowerL);
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, PowerR)

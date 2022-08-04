@@ -288,7 +288,7 @@ namespace eureka_Maqueen {
 
 
 
-//% color="#228b22"  weight=82 blockId=microbit2_denkiLED block="LEDを|%mode|する" group="3 LED"
+//% color="#228b22"  weight=82 block="LEDを|%mode|する" group="3 LED"
 export function maq_LED(mode:ONOFF) {
 
         switch (mode) {

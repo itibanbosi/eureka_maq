@@ -123,7 +123,7 @@ namespace eureka_Maqueen {
 
     //% color="#009A00" weight=20 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="3 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
-    export function sonar_ping_3(limit: number,nagasa: kyori,): boolean {
+    export function sonar_ping_3(limit: number, nagasa: kyori,): boolean {
         switch (nagasa) {
             case kyori.短い:
                 if (maqueen.Ultrasonic(PingUnit.Centimeters) < limit) {
@@ -141,6 +141,35 @@ namespace eureka_Maqueen {
                 break;
         }
     }
+
+
+
+    //% color="#009A00" weight=22 blockId=sonar_ping_2 block="Distance sensor" group="6 Ultrasonic_Distance sensor"
+    //% advanced=true
+    export function sonar_ping_2(): number {
+        let d1 = 0;
+        let d2 = 0;
+
+        for (let i = 0; i < 5; i++) {
+            // send
+            basic.pause(5);
+            pins.setPull(DigitalPin.P2, PinPullMode.PullNone);
+            pins.digitalWritePin(DigitalPin.P2, 0);
+            control.waitMicros(2);
+            pins.digitalWritePin(DigitalPin.P2, 1);
+            control.waitMicros(10);
+            pins.digitalWritePin(DigitalPin.P2, 0);
+            // read
+            d1 = pins.pulseIn(DigitalPin.P0, PulseValue.High, 500 * 58);
+            d2 = d2 + d1;
+        }
+        return Math.round(Math.idiv(d2 / 5, 58) * 1.5);
+    }
+
+
+
+
+
 
     //% color="#6041f1"  weight=23 block="右センサーだけが |%wb| をふんだ時" group="4　センサー" group="4 ﾌｫﾄﾘﾌﾚｸﾀｰ"
     export function photo_R_out(wb: 白黒): boolean {

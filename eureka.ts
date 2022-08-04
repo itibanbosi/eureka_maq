@@ -141,7 +141,7 @@ namespace eureka_Maqueen {
         basic.pause(second * 1000);
     }
 
-    //% color="#009A00" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
+    //% color="#6041f1" weight=78 block="距離が |%limit|(cm)よりも |%nagasa| 時" group="2 超音波きょりｾﾝｻｰ"
     //% limit.min=5 limit.max=30
     export function sonar_ping_3(limit: number, nagasa: kyori,): boolean {
         switch (nagasa) {
@@ -275,7 +275,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#009A00"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
+    //% color="#6041f1"  weight=48 blockId=microbit2_decideLight block="micro:bit光ｾﾝｻ値 |%limit| より暗い" group="5 microbitの光ｾﾝｻ"
     //% limit.min=0 limit.max=100
     export function microbit2_decideLight(limit: number): boolean {
         if (input.lightLevel() / 254 * 100 < limit) {

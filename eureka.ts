@@ -181,7 +181,7 @@ namespace eureka_Maqueen {
 
 
 
-    //% color="#800000"  weight=66 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#696969"  weight=66 block="右ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時"  group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_R_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -202,7 +202,7 @@ namespace eureka_Maqueen {
     }
 
 
-    //% color="#800000"  weight=68 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#696969"  weight=68 block="左ﾗｲﾝｾﾝｻｰだけが |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_L_out(wb: 白黒): boolean {
 
         switch (wb) {
@@ -223,7 +223,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#800000"  weight=64 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#696969"  weight=64 block="左右のﾗｲﾝｾﾝｻｰが両方 |%wb| をふんだ時" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photo_LR_out(wb: 白黒): boolean {
         switch (wb) {
             case 白黒.黒:
@@ -242,7 +242,7 @@ namespace eureka_Maqueen {
                 break;
         }
     }
-    //% color="#800000" weight=62 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#696969" weight=62 block="|%RL|ﾗｲﾝｾﾝｻｰ" group="3 ﾗｲﾝｾﾝｻｰ"
     export function phto_R(RL:lotation) {
         switch (RL){
             case lotation.右:
@@ -252,7 +252,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#800000" weight=60 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
+    //% color="#696969" weight=60 block="|%RL|ﾗｲﾝｾﾝｻｰの値を表示する" group="3 ﾗｲﾝｾﾝｻｰ"
     export function photoL_disp(RL:lotation) {
         switch(RL){
             case lotation.左:

@@ -115,7 +115,7 @@ namespace eureka_Maqueen {
         }
     }
     //% color="#3943c6" weight=68　blockId=moving3
-    //% block="全方向へ　左タイヤの速さ|%PowerL| 右タイヤの速さ|%PowerR|で走る" group="1　基本の動き"
+    //% block="左ﾀｲﾔの速さ|%PowerL| 右ﾀｲﾔの速さ|%PowerR|で走る" group="1　基本の動き"
     //% PowerL.min=0 Power.max=255
     //% PowerR.min=0 Power.max=255
     export function car_balance(PowerL: number, PowerR: number): void {

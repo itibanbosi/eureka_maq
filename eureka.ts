@@ -26,7 +26,7 @@ enum kyori {
 
 namespace eureka_Maqueen {
     //% color="#3943c6" weight=70　blockId=moving1
-    //% block="|%sinkou_houkou| へ |%time_sec|秒間　速さ|%Power|で走る" group="1　基本の動き"
+    //% block="|%sinkou_houkou| へ |%time_sec|秒間,速さ|%Power|で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection_time(sinkou_houkou: direction, time_sec: number, Power: number): void {
         switch (sinkou_houkou) {
@@ -81,7 +81,7 @@ namespace eureka_Maqueen {
     }
 
     //% color="#3943c6" weight=70　blockId=moving2
-    //% block="|%sinkou_houkou|へ　速さ|%Power|で走る" group="1　基本の動き"
+    //% block="|%sinkou_houkou|へ,速さ|%Power|で走る" group="1　基本の動き"
     //% Power.min=0 Power.max=255
     export function car_derection(sinkou_houkou: direction, Power: number): void {
         switch (sinkou_houkou) {
@@ -115,7 +115,7 @@ namespace eureka_Maqueen {
         }
     }
     //% color="#3943c6" weight=68　blockId=moving3
-    //% block="左ﾀｲﾔの速さ|%PowerL| 右ﾀｲﾔの速さ|%PowerR|で走る" group="1　基本の動き"
+    //% block="左ﾀｲﾔの速さ|%PowerL|,右ﾀｲﾔの速さ|%PowerR|で走る" group="1　基本の動き"
     //% PowerL.min=0 Power.max=255
     //% PowerR.min=0 Power.max=255
     export function car_balance(PowerL: number, PowerR: number): void {

@@ -262,7 +262,7 @@ namespace eureka_Maqueen {
         }
     }
 
-    //% color="#228b22"  weight=60 block="LEDを|%mode|する" group="4 LED"
+    //% color="#ffa500"  weight=60 block="LEDを|%mode|する" group="4 LED"
     export function maq_LED(mode: ONOFF) {
 
         switch (mode) {
